@@ -5,6 +5,12 @@ import mysql.connector
 application = flask.Flask(__name__)
 application.debug = True
 
+os.environ['MYSQL_USERNAME'] = 'admin'
+os.environ['MYSQL_PASSWORD'] = '123-+Asd!!'
+os.environ['MYSQL_INSTANCE_NAME'] = 'DEVOPSCASE'
+os.environ['MYSQL_PORT_3306_TCP_ADDR'] = '192.168.126.129'
+os.environ['MYSQL_PORT_3306_TCP_PORT'] = '3306'
+
 @application.route('/')
 def hello_world():
   storage = Storage()
